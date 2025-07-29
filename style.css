@@ -1,0 +1,598 @@
+body {
+    background-color: #080A08;
+    cursor: url('public/images/cursor.svg') 24 24, auto;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: auto;
+
+}
+
+#speaker {
+    display: flex;
+    width: 108px;
+    height: 99px;
+    padding: 23.151px 25.582px 23.526px 25.104px;
+    justify-content: center;
+    align-items: center;
+    gap: 3.242px;
+    flex-shrink: 0;
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    z-index: 9999;
+    cursor: pointer;
+    transition: transform 0.3s ease, scale 0.3s ease;
+}
+
+#speaker:hover {
+    transform: scale(1.2);
+    cursor: url('public/images/pointer.svg') 24 24, auto;
+}
+
+#sound {
+
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+#speaker.shrink {
+    transform: scale(0.6);
+}
+
+/*scene-1-2-3-*/
+#scene-1-2-3 {
+    width: 100%;
+    height: 3242px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: hidden;
+    margin: auto;
+}
+
+.text-bg {
+    width: 411px;
+    height: 88px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+.text-bg-blue {
+    width: 401.64px;
+    height: 75.99px;
+    left: 9.36px;
+    top: 0px;
+    position: absolute;
+    opacity: 0.80;
+    background: #019EC0;
+}
+
+.text-bg-red {
+    width: 401.64px;
+    height: 75.99px;
+    left: 0px;
+    top: 12.01px;
+    position: absolute;
+    opacity: 0.70;
+    background: #721916;
+}
+
+.text-style {
+    top: 26px;
+    position: absolute;
+    text-align: center;
+    color: #FEFEFE;
+    font-size: 24px;
+    font-family: Arvo;
+    font-weight: 400;
+    line-height: 36px;
+    word-wrap: break-word;
+    font-style: normal;
+}
+
+.video {
+    mix-blend-mode: lighten;
+}
+
+.hide {
+    opacity: 0.1;
+
+}
+
+.hide:hover {
+    opacity: 1;
+    mix-blend-mode: difference;
+    cursor: url('public/images/pointer.svg') 24 24, auto;
+}
+
+/*.   scene 4.  */
+#scene-4 {
+    width: 100%;
+    height: 1080px;
+    left: 0px;
+    top: 3242px;
+    position: absolute;
+    overflow: hidden;
+    margin: auto;
+
+}
+
+#img-tree-1 {
+    width: 440.64px;
+    height: 1162.08px;
+    left: 1066px;
+    top: -72px;
+    position: absolute;
+    cursor: grab;
+    user-select: none;
+}
+
+#img-tree-2 {
+    width: 219.36px;
+    height: 886.56px;
+    left: 991px;
+    top: 196px;
+    position: absolute;
+}
+
+#img-tree-3 {
+    width: 286.56px;
+    height: 849.60px;
+    left: 326px;
+    top: 57px;
+    position: absolute;
+}
+
+#img-tree-4 {
+    width: 297.12px;
+    height: 1071.36px;
+    left: 489px;
+    top: -27px;
+    position: absolute;
+}
+
+#img-tree-5 {
+    width: 539.04px;
+    height: 1135.20px;
+    left: -133px;
+    top: -34px;
+    position: absolute;
+}
+
+#img-tree-6 {
+    width: 338.88px;
+    height: 1048.32px;
+    left: 774px;
+    top: -42px;
+    position: absolute;
+}
+
+.drag-item {
+    cursor: grab;
+    user-select: none;
+    transition: opacity 0.3s ease;
+    cursor: url('public/images/pointer.svg') 24 24, auto;
+}
+
+.drag-text {
+    color: #FEFEFE;
+    font-size: 26px;
+    font-family: Arvo;
+    font-weight: 400;
+    line-height: 36px;
+    padding: 8px;
+    text-align: center;
+    background-color: #019EC0;
+    mix-blend-mode: difference;
+    word-wrap: break-word;
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+
+    animation-name: opa-text;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    cursor: url('public/images/pointer.svg') 24 24, auto;
+}
+
+@keyframes opa-text {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+.nexttext {
+    color: #FEFEFE;
+    font-size: 26px;
+    font-family: Arvo;
+    font-weight: 400;
+    line-height: 36px;
+    padding: 8px;
+    text-align: center;
+    background-color: rgba(114, 25, 22, 0.7);
+    word-wrap: break-word;
+    position: absolute;
+
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    cursor: url('public/images/pointer.svg') 24 24, auto;
+}
+
+#instruction {
+    top: 400px;
+    right: 0;
+    background: #721916;
+}
+
+#instruction2 {
+    top: 400px;
+    right: 0;
+    background: #721916;
+}
+
+#text-tree-1 {
+    left: 1250px;
+    top: 423px;
+    z-index: 1;
+}
+
+#text-tree-2 {
+    left: 1050px;
+    top: 473px;
+    z-index: 1;
+}
+
+#text-tree-3 {
+    left: 411px;
+    top: 419px;
+    z-index: 1;
+}
+
+#text-tree-4 {
+    left: 590px;
+    top: 421px;
+    z-index: 1;
+}
+
+#text-tree-5 {
+    left: 117px;
+    top: 498px;
+    z-index: 1;
+}
+
+#text-tree-6 {
+    left: 848px;
+    top: 476px;
+    z-index: 1;
+}
+
+#yellow-light {
+    animation-name: yellow-light;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes yellow-light {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#white-light {
+    animation-name: white-light;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes white-light {
+    0% {
+        opacity: 1;
+    }
+
+    35% {
+        opacity: 0.8;
+    }
+
+    75% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.nexttext {
+    display: none;
+    width: 95px;
+    cursor: pointer;
+}
+
+.nexttext:hover {
+    background-color: rgba(1, 158, 192, 0.5);
+    cursor: url('public/images/pointer.svg') 24 24, auto;
+}
+
+/*.  scene-5.  */
+#scene-5 {
+    width: 100%;
+    height: 1080px;
+    left: 0px;
+    top: 4322px;
+    position: absolute;
+    background: #080A08;
+    overflow: hidden;
+    margin: auto;
+}
+
+#sun {
+    animation-name: sun-anim;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes sun-anim {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#sun-light {
+    animation-name: sun-light-anim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes sun-light-anim {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+#light {
+    animation-name: light-anim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes light-anim {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.5
+    }
+}
+
+
+/*scene-5-1*/
+#scene-5-1 {
+    width: 100%;
+    height: 1080px;
+    left: 0px;
+    top: 5402px;
+    position: absolute;
+    background: #080A08;
+    overflow: hidden;
+    margin: auto;
+}
+
+.textscene5 {
+    width: 762px;
+    position: absolute;
+    text-align: center;
+    color: #FEFEFE;
+    font-size: 24px;
+    font-family: Arvo;
+    font-style: normal;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+}
+
+.textscene5-1 {
+    width: 762px;
+    position: absolute;
+    text-align: right;
+    color: #FEFEFE;
+    font-size: 24px;
+    font-family: Arvo;
+    font-style: normal;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    animation-name: ts5-1-anim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes ts5-1-anim {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.02);
+    }
+}
+
+/*.  scene-6.  .*/
+#scene-6 {
+    width: 100%;
+    height: 1080px;
+    left: 0px;
+    top: 6482px;
+    position: absolute;
+    overflow: hidden;
+    margin: auto;
+}
+
+/*. scene-7.  */
+#scene-7 {
+    width: 100%;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+
+}
+
+#scene-8 {
+    width: 100%;
+    height: 1080px;
+    left: 0px;
+    top: 1080px;
+    position: absolute;
+    overflow: hidden;
+    margin: auto;
+    z-index: -1;
+}
+
+.layer,
+.text-box {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    will-change: transform, opacity;
+}
+
+
+
+/*.  scene-9 */
+#scene-9 {
+    width: 100%;
+    height: 1080px;
+    left: 0px;
+    top: 9722px;
+    position: absolute;
+    overflow: hidden;
+    margin: auto;
+}
+
+.lyrics-container {
+    width: 700px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    top: 450px;
+    font-family: Arvo;
+    font-size: 24px;
+    font-style: normal;
+    margin: auto;
+    color: #FEFEFE;
+}
+
+.lyrics-scroll {
+    height: auto;
+    overflow-y: auto;
+    pointer-events: none;
+    /* disables scroll interaction normally */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+.lyrics-scroll::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+.lyrics-container:hover .lyrics-scroll {
+    pointer-events: auto;
+    /* enables scroll only on hover */
+}
+
+.lyrics-line {
+    padding: 5px 10px;
+    opacity: 0.3;
+    scale: 1;
+    transition: all 0.7s ease;
+    text-align: center;
+
+}
+
+.lyrics-line.highlight {
+    opacity: 1;
+    scale: 1.2;
+}
+
+#moon-light {
+    animation-name: moon-light-anim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transition: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes moon-light-anim {
+    from {
+        opacity: 0.5;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 0.8;
+        transform: scale(1.4);
+    }
+}
+
+#scene-10 {
+    width: 100%;
+    height: 1080px;
+    left: 0px;
+    top: 10802px;
+    position: absolute;
+    overflow: hidden;
+    margin: auto;
+}
+
+#scene-7-8 {
+    width: 100%;
+    height: 2160px;
+    left: 0px;
+    top: 7562px;
+    position: absolute;
+    overflow: hidden;
+    margin: auto;
+}
